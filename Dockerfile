@@ -7,11 +7,10 @@ RUN pip install --upgrade pip
 RUN useradd -ms /bin/bash appluser
 USER appluser
 WORKDIR /home/appluser
+ENV PATH="/home/appluser/.local/bin:${PATH}"
 
 COPY --chown=appluser:appluser requirements.txt requirements.txt
 RUN pip3 install --user -r requirements.txt
-
-ENV PATH="/home/appluser/.local/bin:${PATH}"
 
 COPY --chown=appluser:appluser . .
 
