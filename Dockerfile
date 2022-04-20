@@ -2,8 +2,6 @@
 
 FROM python:3.9.12-slim-buster
 
-
-
 RUN useradd -ms /bin/bash appluser
 USER appluser
 WORKDIR /home/appluser
