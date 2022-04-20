@@ -12,4 +12,5 @@ COPY . .
 RUN adduser -D appluser
 USER appluser
 
+
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
