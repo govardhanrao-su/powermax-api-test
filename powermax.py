@@ -15,11 +15,6 @@ def get_connection(sid=None):
     return connection
 
 
-# Closes the PowerMAX storage system connection
-def close_connection(connection):
-    pass
-
-
 # get unisphere version
 def get_uni_ver():
     connection = get_connection()
@@ -56,6 +51,14 @@ def get_headroom(sid):
         return "Symmetrix ID: {0} not managed locally".format(sid)
 
 
+def get_storage_groups(sid):
+    connection = get_connection(sid=sid)
+    result = connection.provisioning.get_storage_group_list()
+    connection.close_session()
+    return result
+
+
 if __name__ == "__main__":
     print(list_arrays())
     print(get_headroom('000197902448'))
+    print(get_storage_groups('000197902448'))

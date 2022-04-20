@@ -1,4 +1,5 @@
 from flask import Flask
+
 import powermax
 
 app = Flask(__name__)
@@ -30,6 +31,11 @@ def show_arrays():
 @app.route('/arrays/<sid>')
 def show_array(sid):
     return str(powermax.get_array(sid))
+
+
+@app.route('/arrays/<sid>/sgs')
+def get_sgs(sid):
+    return str(powermax.get_storage_groups(sid))
 
 
 @app.route('/headroom/<sid>')
