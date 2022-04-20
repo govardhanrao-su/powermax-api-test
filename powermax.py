@@ -1,3 +1,5 @@
+'''PowerMAX2000 storage systems'''
+
 import json
 
 import PyU4V
