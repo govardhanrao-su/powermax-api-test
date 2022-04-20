@@ -2,9 +2,9 @@
 
 FROM python:3.9.12-slim-buster
 
-RUN pip install --upgrade pip3
+RUN pip install --upgrade pip
 
-RUN useradd -u 1234 appluser
+RUN useradd -ms /bin/bash appluser
 USER appluser
 WORKDIR /home/appluser
 
