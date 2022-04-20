@@ -1,3 +1,5 @@
+'''import modules'''
+
 from flask import Flask
 
 import powermax
