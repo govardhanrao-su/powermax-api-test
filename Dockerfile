@@ -2,7 +2,7 @@
 
 FROM python:3.9.12-slim-buster
 
-RUN pip3 install --upgrade pip3
+RUN pip install --upgrade pip3
 
 RUN useradd -u 1234 appluser
 USER appluser
