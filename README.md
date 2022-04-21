@@ -16,3 +16,19 @@ port=8443
 array=00012345678
 verify=False
 ```
+
+## Demo
+
+- Install Docker Desktop - https://docs.docker.com/desktop/
+
+- clone repo - `git clone git@github.com:govardhanrao-su/powermax-api-test.git`
+
+- cd `powermax-api-test`
+
+- Run command `docker-compose build` to build the docker image
+
+- Run command `docker-compose up` to start the container
+
+- open another terminal to test API using curl command `curl localhost:8000`
+
+- Run command `docker-compose up -d ` to start the container in detach mode
