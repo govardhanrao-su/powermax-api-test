@@ -1,2 +1,2 @@
 PyU4V==9.2.1.6
-flask
+Flask==2.1.1
